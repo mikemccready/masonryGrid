@@ -1,4 +1,99 @@
+.grid {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
 .grid-item {
-	/*background-color: rgba(0,0,0,.33);*/
+	position: relative;
+	width: 20%;
+	padding-bottom: 20%;
+	background-color: rgba(0, 0, 0, .33);
 	margin: 5px;
+}
+
+.grid-item#wide {
+	width: calc(40% + 10px);
+	padding-bottom: 20%;
+}
+
+.grid-item#tall {
+	padding-bottom: calc(40% + 10px);
+}
+
+.itemOverlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: .5em;
+	opacity: 0;
+}
+
+.itemOverlay:hover {
+	opacity: 1;
+	background-color: rgba(255,255,255,.9);
+	transition: opacity 1s;
+}
+
+
+
+
+@media (min-width : 768px) and (max-width : 1024px) {
+
+	.grid-item {
+		width: 30%;
+		padding-bottom: 30%;
+		background-color: rgba(0, 0, 0, .33);
+		margin: 5px;
+	}
+
+	.grid-item#wide {
+		width: calc(60% + 10px);
+		padding-bottom: 30%;
+	}
+
+	.grid-item#tall {
+		padding-bottom: calc(60% + 10px);
+	}
+}
+
+@media (max-width : 768px) {
+
+	.grid-item {
+		width: 45%;
+		padding-bottom: 45%;
+		background-color: rgba(0, 0, 0, .33);
+		margin: 5px;
+	}
+
+	.grid-item#wide {
+		width: calc(90% + 10px);
+		padding-bottom: 45%;
+	}
+
+	.grid-item#tall {
+		padding-bottom: calc(90% + 10px);
+	}
+}	
+
+@media (max-width : 320px) {
+
+	.grid-item {
+		width: 90%;
+		padding-bottom: 90%;
+		background-color: rgba(0, 0, 0, .33);
+		margin: 5px;
+	}
+
+	.grid-item#wide {
+		width: calc(90%);
+		padding-bottom: 45%;
+	}
+
+	.grid-item#tall {
+		padding-bottom: calc(90%);
+	}
 }
